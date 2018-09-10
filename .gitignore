@@ -16,3 +16,6 @@ __pycache__/
 
 # vim
 .vim
+
+#Mac 
+.DS_Store
