@@ -1,0 +1,18 @@
+# Just keep the local bin
+.local/*
+!.local/bin
+
+# Only keep service files
+.config/systemd/user/*
+!.config/systemd/user/*.service
+
+*.swp
+*.idea
+
+# Python Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# vim
+.vim

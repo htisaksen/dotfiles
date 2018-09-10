@@ -1,0 +1,16 @@
+ansible
+cassandra
+cowsay
+httpie
+jq
+kubernetes-cli
+kubernetes-helm
+maven
+node
+pcre2
+wget
+htop
+nmap
+links
+tree
+cask
