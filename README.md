@@ -1,5 +1,4 @@
-#.files
-#Mac config to setup environment
+##.files for Mac config to setup environment
 Order of installation
 1. brew
 2. zsh
@@ -42,7 +41,7 @@ make brew
 make zsh
 ```
 ### Info
-Uses robbyrussell/oh-my-zsh. .zshrc has plugins installed.
+Uses robbyrussell/oh-my-zsh. .zshrc has plugins installed. Aliases are sourced here. Add or remove in .aliases
 #### plugins in .zshrc
 - git
 - osx
