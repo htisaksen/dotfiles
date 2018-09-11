@@ -116,3 +116,9 @@ if [ -f '/Users/hyosunisaksen/Workspace/google-cloud-sdk/path.zsh.inc' ]; then s
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/hyosunisaksen/Workspace/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/hyosunisaksen/Workspace/google-cloud-sdk/completion.zsh.inc'; fi
+
+#Source files
+for file in ~/.{aliases}; do
+	[[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
+done
+unset file
