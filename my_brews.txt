@@ -11,6 +11,8 @@ pcre2
 wget
 htop
 nmap
+ngrep
 links
 tree
 cask
+colordiff
