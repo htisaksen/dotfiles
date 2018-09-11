@@ -36,7 +36,17 @@ vim:
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 zsh:
+	# clone
+	git clone https://github.com/powerline/fonts.git --depth=1
+	# install
+	cd fonts
+	./install.sh
+	# clean-up a bit
+	cd ..
+	rm -rf fonts
 	brew install zsh zsh-completions
+	git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+	ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 all-apps: apps dev-apps
