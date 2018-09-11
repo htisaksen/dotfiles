@@ -1,4 +1,5 @@
-##.files for Mac config to setup environment
+# .files
+# Mac config to setup environment
 Order of installation
 1. brew
 2. zsh
