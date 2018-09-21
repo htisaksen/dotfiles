@@ -16,3 +16,6 @@ links
 tree
 cask
 colordiff
+maven
+maven-completion
+bat

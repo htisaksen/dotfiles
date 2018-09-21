@@ -67,7 +67,6 @@ plugins=(
   encode64
   httpie
   jsontools
-  mvn
   ng
   node
   npm
@@ -75,8 +74,6 @@ plugins=(
   python
   web-searchs
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -120,3 +117,4 @@ if [ -f '/Users/hyosunisaksen/Workspace/google-cloud-sdk/completion.zsh.inc' ]; 
 
 #Source files
 source ~/.aliases
+source $ZSH/oh-my-zsh.sh
