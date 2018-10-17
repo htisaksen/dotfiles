@@ -1,5 +1,5 @@
 initialize: brew zsh vim dotfiles
-
+	echo "Initialization Complete";
 brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > temp/brew
 	/usr/bin/ruby -e
@@ -38,6 +38,8 @@ vim:
 zsh:
 	brew install zsh zsh-completions
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+	ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 all-apps: apps dev-apps
 	@# Install all apps
