@@ -112,9 +112,10 @@ plugins=(
 #Source files
 source ~/.aliases
 source $ZSH/oh-my-zsh.sh
-
+source $HOME/Workspace/DevOps/Cloud/google-cloud-sdk/completion.zsh.inc
+source $HOME/Workspace/DevOps/Cloud/google-cloud-sdk/path.zsh.inc
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/htisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/htisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/tisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/htisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/htisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/tisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tisaksen/Workspace/DevOps/Cloud/google-cloud-sdk/completion.zsh.inc'; fi
