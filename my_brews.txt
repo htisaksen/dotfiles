@@ -16,3 +16,4 @@ links
 tree
 cask
 colordiff
+make

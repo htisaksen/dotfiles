@@ -1,10 +1,11 @@
 initialize: brew zsh vim dotfiles
 
 brew:
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > temp/brew
+	mkdir /tmp/brew
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > /tmp/brew
 	/usr/bin/ruby -e
 	for i in $(shell cat my_brews.txt); do; echo "$i"; done
-	rm -rf
+	rm -rf /tmp/brew
 
 dotfiles:
 	@# Link ssh dir
