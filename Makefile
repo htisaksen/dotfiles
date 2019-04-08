@@ -60,7 +60,8 @@ apps:
 	brew cask install slack
 	brew cask install spotify
 	brew cask install firefox
-
+	brew cask install private-internet-access
+	
 dev-apps:
 	brew cask install intellij-idea
 	brew cask install java
