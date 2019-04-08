@@ -73,7 +73,7 @@ plugins=(
   npm
   pip
   python
-  web-searchs
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
