@@ -2,7 +2,13 @@
 ## Mac config to setup environment
 Order of installation
 1. brew
+```
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 2. zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 3. vim
 4. dotfiles
 
