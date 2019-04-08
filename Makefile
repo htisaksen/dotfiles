@@ -59,8 +59,11 @@ apps:
 	brew cask install caskroom/versions/firefoxdeveloperedition
 	brew cask install slack
 	brew cask install spotify
+	brew cask install firefox
 
 dev-apps:
 	brew cask install intellij-idea
 	brew cask install java
-	brew cask install atom
+	brew cask install visual-studio-code
+	brew cask install docker
+	brew cask install docker-toolbox
