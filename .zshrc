@@ -108,17 +108,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
   # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/$USER/Workspace/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/$USER/Workspace/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/$USER/Workspace/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/$USER/Workspace/google-cloud-sdk/completion.zsh.inc'; fi
+  #autoload -U promptinit; promptinit
+  #prompt spaceship
 
 #Source files
 for file in ~/.{aliases}; do
 	[[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
 done
 unset file
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tisaksen/Workspace/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tisaksen/Workspace/tools/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tisaksen/Workspace/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tisaksen/Workspace/tools/google-cloud-sdk/completion.zsh.inc'; fi
