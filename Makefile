@@ -54,14 +54,12 @@ all-apps: apps dev-apps
 	@# Install all apps
 
 apps:
-	brew cask install google-chrome
 	brew cask install google-drive
-	brew cask install caskroom/versions/firefoxdeveloperedition
 	brew cask install slack
 	brew cask install spotify
-	brew cask install firefox
 	brew cask install private-internet-access
-	
+	brew cask install caskroom/versions/firefoxdeveloperedition
+	brew cask install firefox
 dev-apps:
 	brew cask install intellij-idea
 	brew cask install java
