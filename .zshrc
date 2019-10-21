@@ -73,10 +73,15 @@ plugins=(
   npm
   pip
   python
+  golang
+  nmap
   web-search
+  kubectl
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
 
 # User configuration
 

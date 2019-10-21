@@ -74,7 +74,9 @@ alias drmi='docker rmi -f $(docker images -f "dangling=true" -q)'
 alias drmv='docker volume rm $(docker volume ls -f dangling=true -q)'
 ##################################  Kubernetes  #################################
 # kubectl proxy
-alias kubeproxy='kubectl proxy --port=9999'
+alias k='kubectl'
+alias kg='kubectl get pods'
+alias kl='kubectl logs -f'
 ####################################   Brew   ###################################
 #upgrade homebrew
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
