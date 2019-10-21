@@ -3,7 +3,6 @@ colordiff
 fontconfig
 lua
 luarocks
-maven
 p11-kit
 terraform
 xz
@@ -22,7 +21,6 @@ httpie
 luarocks
 kubernetes-cli
 kubernetes-helm
-kubefwd
 make
 openssl
 sqlite
@@ -31,4 +29,3 @@ wget
 nmap
 ngrep
 links
-google-backup-and-sync

@@ -1,14 +1,12 @@
-initialize: brew zsh vim dotfiles
+.PHONY: initialize brew dotfiles zsh all-apps apps dev-apps
+initialize: brew zsh dotfiles
 
 brew:
-	mkdir /tmp/brew
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > /tmp/brew
-	/usr/bin/ruby -e
-	for i in $(shell cat my_brews.txt); do; echo "$i"; done
-	rm -rf /tmp/brew
-
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby 
+	xargs brew install < my_brews.txt
 dotfiles:
 	@# Link ssh dir
+	mkdir -p $(HOME)/.ssh
 	@for file in $(shell find $(CURDIR)/.ssh -maxdepth 1 \
 			-name "*" \
 			-not -name ".ssh"); do \
@@ -32,37 +30,31 @@ dotfiles:
 		ln -sf $$file $(HOME)/$$f; \
 	done
 
-vim:
-	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install_awesome_vimrc.sh
-
 zsh:
-	# clone
 	git clone https://github.com/powerline/fonts.git --depth=1
-	# install
-	cd fonts
-	./install.sh
-	# clean-up a bit
-	cd ..
+	./fonts/install.sh
 	rm -rf fonts
 	brew install zsh zsh-completions
-	git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-	ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	
+	git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" 
+	ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme" 
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
 
 all-apps: apps dev-apps
 	@# Install all apps
 
 apps:
-	brew cask install google-drive
+	brew cask install google-backup-and-sync
 	brew cask install slack
 	brew cask install spotify
 	brew cask install private-internet-access
-	brew cask install caskroom/versions/firefoxdeveloperedition
+	brew cask install homebrew/cask-versions/firefox-developer-edition
 	brew cask install firefox
 dev-apps:
 	brew cask install intellij-idea
 	brew cask install java
+	brew install maven
 	brew cask install visual-studio-code
+	brew cask install keepassxc
 	brew cask install docker
-	brew cask install docker-toolbox
+	brew cask install postman
