@@ -35,16 +35,16 @@ dotfiles:
 
 .PHONY: zsh
 zsh:
-	#git clone https://github.com/powerline/fonts.git --depth=1
-	#./fonts/install.sh
-	#rm -rf fonts
-	#brew install zsh zsh-completions
+	git clone https://github.com/powerline/fonts.git --depth=1
+	./fonts/install.sh
+	rm -rf fonts
+	brew install zsh zsh-completions
 	curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o install-oh-my-zsh.sh;
 	sh install-oh-my-zsh.sh
 	rm install-oh-my-zsh.sh
 	chsh -s /usr/bin/zsh
-	#git clone https://github.com/denysdovhan/spaceship-prompt.git /${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt
-	#ln -s ${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ${HOME}/.oh-my-zsh/custom/themes/spaceship.zsh-theme
+	git clone https://github.com/denysdovhan/spaceship-prompt.git /${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt
+	ln -s ${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ${HOME}/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 
 .PHONY: all-apps
 all-apps: apps dev-apps
