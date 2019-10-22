@@ -101,7 +101,7 @@ source <(kubectl completion zsh)
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -112,11 +112,11 @@ source <(kubectl completion zsh)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-  # Set Spaceship ZSH as a prompt
-  #autoload -U promptinit; promptinit
-  #prompt spaceship
+# Set Spaceship ZSH as a prompt
+# autoload -U promptinit; promptinit
+# prompt spaceship
 
-#Source files
+# Source files
 for file in ~/.{aliases}; do
 	[[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
 done
