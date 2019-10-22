@@ -68,3 +68,4 @@ dev-apps:
 	brew cask install keepassxc
 	brew cask install docker
 	brew cask install postman
+	brew cask install pycharm
