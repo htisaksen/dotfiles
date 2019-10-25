@@ -74,6 +74,7 @@ alias drmi='docker rmi -f $(docker images -f "dangling=true" -q)'
 alias drmv='docker volume rm $(docker volume ls -f dangling=true -q)'
 ##################################  Kubernetes  #################################
 # kubectl proxy
+alias kde="kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains('Evicted')) | 'kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)'' | xargs -n 1 bash -c"
 alias k='kubectl'
 alias kg='kubectl get pods'
 alias kl='kubectl logs -f'

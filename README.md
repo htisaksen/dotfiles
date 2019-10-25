@@ -1,77 +1,36 @@
 # .files
-## Mac config to setup environment
-Order of installation
+Mac config to setup dev environment
+### Pre-requesites
 1. brew
 ```
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-2. zsh
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-3. vim
-4. dotfiles
-
-## Initialization
+2. git + xcode init
+## Initialization - to init and install brew zsh and dotfiles
 ```bash
-make initialize
+make all
 ```
-### Info
-Run to initialize(brew zsh vim dotfiles makes) and install
-
-## Install brew dependencies brew
+## Install brew - install dependencies from my_brews.txt 
 ```bash
 make brew
 ```
-### Info
-
-#### Brew Packages (Reads from my_brews.txt)
-- ansible
-- cassandra
-- cowsay
-- httpie
-- jq
-- kubernetes-cli
-- kubernetes-helm
-- maven
-- node
-- pcre2
-- wget
-- htop
-- nmap
-- links
-- tree
-- cask
-
-## Setup zsh
+## Setup zsh - install oh-my-zsh with spaceship theme 
 ```bash
 make zsh
 ```
-### Info
-Uses robbyrussell/oh-my-zsh. .zshrc has plugins installed. Aliases are sourced here. Add or remove in .aliases
-#### plugins in .zshrc
-- git
-- osx
-- docker
-- encode64
-- httpie
-- jsontools
-- mvn
-- ng
-- node
-- npm
-- pip
-- python
-- web-searchs
-## Setup vim
-```bash
-make vim
-```
-### Info
-Vim grabs amix/vimrc.git
-## Setup dotfiles
+## Setup dotfiles - source dotfiles (vimrc,zshrc)
 ```bash
 make dotfiles
 ```
-### Info
-These dotfiles are made for zsh
+## Setup all applications - personal and development apps
+```bash
+make all-apps
+```
+## Setup personal applications - personal apps
+```bash
+make apps
+```
+## Setup personal applications - dev apps
+```bash
+make dev-apps
+```
