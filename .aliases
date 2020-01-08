@@ -8,6 +8,8 @@ else # OS X `ls`
 fi
 # show sizes in MB
 alias free='free -m'
+# watch for alias
+alias watch="watch "
 # throw item in trash
 alias trash="rm -i"
 # copy file interactive
